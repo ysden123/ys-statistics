@@ -8,9 +8,9 @@ package com.stulsoft.statistics
  * @author Yuriy Stul
  */
 class StatisticsInt extends Statistics[Int] {
-  override def min(): Int = values.min
+  override def min(): Int = samples.min
 
-  override def max(): Int = values.max
+  override def max(): Int = samples.max
 
-  override def average(): Double = if (values.nonEmpty) 1.0 * (values.sum / values.size) else 0.0
+  override def average(): Double = if (samples.nonEmpty) 1.0 * (samples.sum / samples.size) else 0.0
 }

@@ -18,21 +18,23 @@ class StatisticsTest extends AnyFunSuite {
 
   test("int"){
     val s = new StatisticsInt()
-    s.addValue(1)
-    s.addValue(2)
-    s.addValue(3)
+    s.addSample(1)
+    s.addSample(2)
+    s.addSample(3)
     assertResult(1)(s.min())
     assertResult(3)(s.max())
     assertResult(2.0)(s.average())
+    println(s.summary())
   }
 
   test("double"){
     val s = new StatisticsDouble()
-    s.addValue(1)
-    s.addValue(2)
-    s.addValue(3)
+    s.addSample(1)
+    s.addSample(2)
+    s.addSample(3)
     assertResult(1.0)(s.min())
     assertResult(3.0)(s.max())
     assertResult(2.0)(s.average())
+    println(s.summary())
   }
 }
