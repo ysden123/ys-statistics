@@ -11,10 +11,10 @@ import scala.collection.mutable.ListBuffer
  * @author Yuriy Stul
  */
 trait Statistics[T <: AnyVal] {
-  protected val values: mutable.ListBuffer[T] = ListBuffer[T]()
+  protected val samples: mutable.ListBuffer[T] = ListBuffer[T]()
 
-  def addValue(value: T): Unit = {
-    values += value
+  def addSample(sample: T): Unit = {
+    samples += sample
   }
 
   def min():T
@@ -23,4 +23,7 @@ trait Statistics[T <: AnyVal] {
 
   def average():Double
 
+  def summary():String = {
+    s"Statistics summary: number of samples = ${samples.length}, min = ${min()}, max = ${max()}, average = ${average()}"
+  }
 }
