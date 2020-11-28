@@ -16,22 +16,20 @@ class StatisticsTest extends AnyFunSuite {
     assert(s != null)
   }
 
-  test("int"){
+  test("int") {
     val s = new StatisticsInt()
     s.addSample(1)
-    s.addSample(2)
-    s.addSample(3)
+    s += 2 += 3
     assertResult(1)(s.min())
     assertResult(3)(s.max())
     assertResult(2.0)(s.average())
     println(s.summary())
   }
 
-  test("double"){
+  test("double") {
     val s = new StatisticsDouble()
-    s.addSample(1)
-    s.addSample(2)
-    s.addSample(3)
+    s.addSample(1.0)
+    s += 2.0 += 3.0
     assertResult(1.0)(s.min())
     assertResult(3.0)(s.max())
     assertResult(2.0)(s.average())
