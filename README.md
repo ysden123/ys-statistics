@@ -1,2 +1,0 @@
-# ys-statistics
-Statistics

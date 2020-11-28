@@ -1,0 +1,9 @@
+= ys-statistics
+
+Statistics
+
+
+== Build status
+Master: image:https://travis-ci.org/ysden123/ys-statistics.svg?branch=master[Build Status: master,link=https://travis-ci.org/ysden123/ys-statistics]
+
+Develop: image:https://travis-ci.org/ysden123/ys-statistics.svg?branch=develop[Build Status: develop,link=https://travis-ci.org/ysden123/ys-statistics]
