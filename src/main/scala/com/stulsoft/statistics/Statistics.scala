@@ -20,6 +20,8 @@ trait Statistics[T <: AnyVal] {
     this
   }
 
+  def count():Int = samples.length
+
   def min(): T
 
   def max(): T
