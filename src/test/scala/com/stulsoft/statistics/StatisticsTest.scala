@@ -26,6 +26,16 @@ class StatisticsTest extends AnyFunSuite {
     println(s.summary())
   }
 
+  test("long") {
+    val s = new StatisticsLong()
+    s.addSample(1L)
+    s += 2L += 3L
+    assertResult(1L)(s.min())
+    assertResult(3L)(s.max())
+    assertResult(2.0)(s.average())
+    println(s.summary())
+  }
+
   test("double") {
     val s = new StatisticsDouble()
     s.addSample(1.0)
